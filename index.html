@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FaceDetection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <img class="navbar-brand" src="image/logo.png" width="100"/>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#intro">首页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#overview">产品服务</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#video">视频演示</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#detail">功能展示</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">联系我们</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h3>FaceRecognition</h3>
+                <h1>文字填充文字填充</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="overview">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <h3>Face Recognition</h3>
+                <p>文字填充</p>
+                <p>文字填充</p>
+                <p>文字填充</p>
+                <p>文字填充</p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <img src="image/volta.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="detail">
+    <div class="container">
+        <h2>产品服务</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <i class="fa"><img src="image/face-icon.jpg" alt=""></i>
+                    <h3>人脸识别</h3>
+                    <p>比对两张图片，判断是否包含同一个人</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <i class="fa"><img src="image/face-rect.jpg" alt=""></i>
+                    <h3>人脸检测</h3>
+                    <p>检测并定位图片中的人脸，返回高精度的人脸框坐标</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <i class="fa"><img src="image/face-trig.jpg" alt=""></i>
+                    <h3>人脸跟踪</h3>
+                    <p>实时跟踪人脸的位置</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <i class="fa"><img src="image/face-share.jpg" alt=""></i>
+                    <h3>人脸关键点定位</h3>
+                    <p>定位人脸五官与轮廓，最多可返回54个特征点</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="video">
+    <div class="container">
+        <h2>视频展示</h2>
+        <div class="video">
+            <video src="http://60.205.222.196:8080/FaceDetectionDemo//video/video_one.mp4"
+                   style="height: 360px;width: 640px;max-width: 100%;" controls>
+                你的浏览器不支持 <code>video</code> 标签.
+            </video>
+        </div>
+    </div>
+</section>
+<section id="featureDisplay">
+    <div class="container">
+        <h2>功能展示</h2>
+        <div class="row">
+            <div class="custom-file col-6">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">选择文件</label>
+            </div>
+            <div class="col-6">
+                <div id="resultImg"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>
