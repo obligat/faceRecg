@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>FaceDetection</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -67,22 +67,22 @@
         <h2>产品服务</h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6  div-center">
                     <i class="fa"><img src="image/face-icon.jpg" alt=""></i>
                     <h3>人脸识别</h3>
                     <p>比对两张图片，判断是否包含同一个人</p>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6 div-center">
                     <i class="fa"><img src="image/face-rect.jpg" alt=""></i>
                     <h3>人脸检测</h3>
                     <p>检测并定位图片中的人脸，返回高精度的人脸框坐标</p>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6 div-center">
                     <i class="fa"><img src="image/face-trig.jpg" alt=""></i>
                     <h3>人脸跟踪</h3>
                     <p>实时跟踪人脸的位置</p>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6 div-center">
                     <i class="fa"><img src="image/face-share.jpg" alt=""></i>
                     <h3>人脸关键点定位</h3>
                     <p>定位人脸五官与轮廓，最多可返回54个特征点</p>
@@ -108,7 +108,7 @@
         <h2>功能展示</h2>
         <div class="row">
             <div class="custom-file col-6">
-                <input type="file" class="custom-file-input" id="customFile">
+                <input type="file" class="custom-file-input" id="customFile" onchange="handleFiles(this.files[0])">
                 <label class="custom-file-label" for="customFile">选择文件</label>
             </div>
             <div class="col-6">
@@ -128,6 +128,26 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+<script>
+    function handleFiles(file) {
 
+        let reader = new FileReader();
+        let output = document.getElementById('resultImg');
+        reader.readAsDataURL(file);
+
+        reader.onload = function (e) {
+            output.innerHTML = `<img class='thumbnail' src='${this.result}' alt=''/>`;
+        }
+
+    }
+
+
+    $('.navbar-nav > .nav-item').bind('click', function () {
+        $(this).addClass('active')
+            .append('<span class="sr-only">(current)</span>')
+            .siblings().removeClass('active')
+            .children('.nav-link > .sr-only').remove();
+    })
+</script>
 </body>
 </html>
